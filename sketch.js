@@ -2,14 +2,11 @@
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
-//const Body = Matter.Body;
-//const Render=Matter.Render;
 
-var engine,world,paper,dustbin;
+var engine,world,paper;
 
 function setup() {
 	createCanvas(1500, 700);
-    
 
 	engine = Engine.create();
 	world = engine.world;
@@ -22,7 +19,7 @@ function setup() {
 
 	
 	//var render = Render.create({ element: document.body, engine: engine, options: { width: 1200, height: 700, wireframes: false } });
-	Engine.run(engine);
+	//Engine.run(engine);
 }
 
 
@@ -42,7 +39,7 @@ paper.display();
 
 function keyPressed(){
 	if(keyCode === UP_ARROW){
-		Matter.Body.applyForce(paper.body,paper.body.position,{x:5,y:-5});
+		Matter.Body.applyForce(paper.body,paper.body.position,{x:85,y:-85});
 	}
 }
 
